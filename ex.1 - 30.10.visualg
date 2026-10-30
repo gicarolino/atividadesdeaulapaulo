@@ -1,0 +1,29 @@
+algoritmo "CADASTRO DE ALUNOS"
+
+var 
+  nomeAluno: caracter
+  qtdAlunos: inteiro
+  contador: inteiro
+  nomesAlunos: vetor [1..1000] de caracter
+
+inicio
+
+  contador <- 1
+  escreval("INISIRA A QUANTIDADE DE ALUNOS")
+  leia(qtdAlunos)
+
+  para contador de 1 ate qtdAlunos faca
+  escreval("INSIRA O NOME DO ", contador , "º ALUNO")
+  leia(nomeAluno)
+  nomesAlunos [contador] <- nomeAluno
+  fimpara
+
+  contador <- 1
+  
+  para contador de 1 ate 1000 faca
+    escreval(nomesAlunos[contador])
+  fimpara
+
+
+
+fimalgoritmo

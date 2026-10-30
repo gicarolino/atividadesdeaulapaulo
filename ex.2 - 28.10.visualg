@@ -1,0 +1,26 @@
+algoritmo "REVISAO 2"
+
+var
+  tentativas: inteiro
+  palavraChave: caractere
+  chute: caractere
+
+inicio
+
+  tentativas <- 1
+  escreval("JOGADOR 01 - INSIRA SUA PALAVRA-CHAVE")
+  leia(palavraChave)
+  escreval("JOGADO0R 02 - FAÇA SUA PRIMEIRA TENTATIVA")
+  leia(chute)
+
+  enquanto palavraChave <> chute faca
+    escreval("JOGADOR 02 REALIZE MAIS UMA TENTATIVA")
+    leia(chute)
+    tentativas <- tentativas + 1
+  fimenquanto
+
+  escreval("A PALAVRA CHAVE ERA: ", palavraChave)
+  escreval("O JOGADOR 02 ACERTOU EM ", tentativas. " tentativas")
+
+
+fimalgoritmo
