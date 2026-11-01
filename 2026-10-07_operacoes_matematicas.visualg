@@ -1,0 +1,130 @@
+algoritmo "Operacoes_Matematicas"
+
+var
+   n1, n2: real
+   opcao: inteiro
+
+funcao somar(a, b: real): real
+inicio
+   retorne a + b
+fimfuncao
+
+funcao subtrair(a, b: real): real
+inicio
+   retorne a - b
+fimfuncao
+
+funcao multiplicar(a, b: real): real
+inicio
+   retorne a * b
+fimfuncao
+
+funcao dividir(a, b: real): real
+inicio
+   se b = 0 entao
+      escreval("Erro: nao e possivel dividir por zero!")
+      retorne 0
+   senao
+      retorne a / b
+   fimse
+fimfuncao
+
+funcao modulo(a, b: real): real
+inicio
+   se b = 0 entao
+      escreval("Erro: nao e possivel calcular modulo por zero!")
+      retorne 0
+   senao
+      retorne int(a) mod int(b)
+   fimse
+fimfuncao
+
+funcao potencia(a, b: real): real
+inicio
+   retorne a ^ b
+fimfuncao
+
+funcao divisaoInteira(a, b: real): real
+inicio
+   se b = 0 entao
+      escreval("Erro: nao e possivel dividir por zero!")
+      retorne 0
+   senao
+      retorne int(a) div int(b)
+   fimse
+fimfuncao
+
+funcao media(a, b: real): real
+inicio
+   retorne (a + b) / 2
+fimfuncao
+
+inicio
+
+   escreval("========================================")
+   escreval("         CALCULADORA - VISUALG")
+   escreval("========================================")
+   escreval("1 - Adicao")
+   escreval("2 - Subtracao")
+   escreval("3 - Multiplicacao")
+   escreval("4 - Divisao")
+   escreval("5 - Modulo")
+   escreval("6 - Potenciacao")
+   escreval("7 - Divisao inteira")
+   escreval("8 - Media")
+   escreval("========================================")
+   escreva("Escolha uma opcao: ")
+   leia(opcao)
+   escreval("")
+
+   escreva("Digite o primeiro numero: ")
+   leia(n1)
+
+   escreva("Digite o segundo numero: ")
+   leia(n2)
+
+   escreval("")
+   escreval("========================================")
+
+   escolha opcao
+
+      caso 1
+         escreval("OPERACAO: ADICAO")
+         escreval("Resultado: ", somar(n1, n2))
+
+      caso 2
+         escreval("OPERACAO: SUBTRACAO")
+         escreval("Resultado: ", subtrair(n1, n2))
+
+      caso 3
+         escreval("OPERACAO: MULTIPLICACAO")
+         escreval("Resultado: ", multiplicar(n1, n2))
+
+      caso 4
+         escreval("OPERACAO: DIVISAO")
+         escreval("Resultado: ", dividir(n1, n2))
+
+      caso 5
+         escreval("OPERACAO: MODULO")
+         escreval("Resultado: ", modulo(n1, n2))
+
+      caso 6
+         escreval("OPERACAO: POTENCIACAO")
+         escreval("Resultado: ", potencia(n1, n2))
+
+      caso 7
+         escreval("OPERACAO: DIVISAO INTEIRA")
+         escreval("Resultado: ", divisaoInteira(n1, n2))
+
+      caso 8
+         escreval("OPERACAO: MEDIA")
+         escreval("Resultado: ", media(n1, n2))
+
+      outrocaso
+         escreval("Opcao invalida!")
+
+   fimescolha
+
+   escreval("========================================")
+
+fimalgoritmo
